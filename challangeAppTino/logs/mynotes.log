@@ -22,3 +22,4 @@ Traceback (most recent call last):
 NameError: name 'login_user' is not defined
 2025-03-21 16:26:42,608 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
 2025-03-21 16:38:23,820 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
+2025-03-21 16:43:14,819 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
