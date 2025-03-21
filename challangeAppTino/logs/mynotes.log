@@ -1,0 +1,24 @@
+2025-03-21 15:48:39,331 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
+2025-03-21 15:50:07,760 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
+2025-03-21 16:19:23,080 INFO: login des User: test erfolgreich [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\routes.py:52]
+2025-03-21 16:23:22,465 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
+2025-03-21 16:24:13,379 ERROR: Exception on /api/login [POST] [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\myenv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\myenv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\myenv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\myenv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\myenv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\api.py", line 50, in api_login
+    login_user(user)
+    ^^^^^^^^^^
+NameError: name 'login_user' is not defined
+2025-03-21 16:26:42,608 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]
+2025-03-21 16:38:23,820 INFO: Challange App Tino wird gestartet [in C:\Users\tinol\Desktop\ipso\Datenbank_Webentwicklung\Challange\challangeAppTino\app\__init__.py:38]

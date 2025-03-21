@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Meine Notizen{% endblock %}
+
+{% block content %}
+<h1>Willkommen, {{ user.username }}!</h1>
+<h2>Deine Notizen</h2>
+
+{% if user.notes.count() == 0 %}
+    <p>Du hast noch keine Notizen erstellt.</p>
+{% else %}
+    <div class="notes-container">
+        {% for note in user.notes %}
+            <div class="note-card">
+                <h3>{{ note.title }}</h3>
+                <p>{{ note.content }}</p>
+                <small>Erstellt am: {{ note.created_at.strftime('%d.%m.%Y %H:%M') }}</small><br>
+                <small>Zuletzt aktualisiert: {{ note.updated_at.strftime('%d.%m.%Y %H:%M') }}</small>
+                <!-- Knopf für bearbeitungsendpunkt -->
+                 <br>
+                <a href="{{ url_for('edit_note', id=note.id) }}">
+                    <button type="button">✏️ Bearbeiten</button>
+                </a>
+                <!-- Knopf für löschen einer notiz -->
+                <a href="{{ url_for('delete_note', id=note.id) }}">
+                    <button type="button">❌ Löschen</button>
+                </a>
+                <!-- Für weiterentwicklung mit den Tags, Code nicht vollständig entfernt. Innerhalb der Zeit für die Arbeit nicht umsetzbar-->
+                {% if note.tags %}
+                    <p><strong>Tags:</strong>
+                        {% for tag in note.tags %}
+                            <span class="tag">{{ tag.name }}</span>
+                        {% endfor %}
+                    </p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<h2>Neue Notiz erstellen</h2>
+<form action="/add_note" method="POST">
+    <input type="text" name="title" placeholder="Titel" required><br><br>
+    <textarea name="content" placeholder="Inhalt..." rows="5" cols="40" required></textarea><br><br>
+    <button type="submit">Notiz hinzufügen</button>
+</form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Debuggung Hilfen{% endblock %}     
+
+{% block content %}
+      <!--Block aus den jeweiligen Fehler/Statusmeldungen an -->  
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+          <div class="flashes">
+              {% for category, message in messages %}
+                  <div class="alert alert-{{ category }}">
+                      {{ message }}
+                  </div>
+              {% endfor %}
+          </div>
+      {% endif %}
+  {% endwith %}   
+
+{% endblock %}
