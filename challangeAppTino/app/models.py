@@ -16,7 +16,7 @@ def load_user(id):
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True, nullable=False)
-    email = db.Column(db.String(120), index=True, unique=True, nullable=False)
+    email = db.Column(db.String(120), index=True, nullable=False)
     #nullable hinzugefügt aufgrund eines testfehlers mit leerer emailadresse
     password_hash = db.Column(db.String(128))
     notes = db.relationship('Note', backref='author', lazy='dynamic')
